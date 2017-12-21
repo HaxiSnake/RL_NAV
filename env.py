@@ -160,7 +160,7 @@ class Env(object):
                 print(self.trajectories[i])
                 for loc in self.trajectories[i]:
                     writer.writerow([i + 1, self.day,
-                        '%02d:%02d'%(t // self.tick_per_hour + 3, t % self.tick_per_hour),loc[0] + 1, loc[1] + 1])
+                        '%02d:%02d'%(t // self.tick_per_hour + 3, 2*(t % self.tick_per_hour)),loc[0] + 1, loc[1] + 1])
                     t = t + 1
                 writer.writerow([i + 1, self.day,
-                        '%02d:%02d'%(t // self.tick_per_hour + 3, t % self.tick_per_hour), self.targets[i][0] + 1, self.targets[i][1] + 1])
+                        '%02d:%02d'%(t // self.tick_per_hour + 3, 2*(t % self.tick_per_hour)), self.targets[i][0] + 1, self.targets[i][1] + 1])
