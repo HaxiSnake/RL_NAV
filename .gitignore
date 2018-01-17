@@ -1,6 +1,10 @@
 data/
 .vscode/
 
+saved_model
+
+pred.csv
+pred.zip
 auth.json
 result.csv
 *.png

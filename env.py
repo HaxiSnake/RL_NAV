@@ -4,11 +4,14 @@ import os,csv
 
 import dbconn
 
+from predict_speed import *
+
 class InvalidActionException(Exception):
     pass
 
 class Env(object):
     def __init__(self, tbl, day, modelno = None):
+        self.dims = [548,421]
         self.load_targets()
         self.table_name = tbl
         self.day = day
@@ -41,8 +44,8 @@ class Env(object):
 
         conn = dbconn.get_conn()
 
-        for hour in self.hours:
-            self.datas.append(self.get_one_hour(conn, self.day, hour))
+        #for hour in self.hours:
+        #    self.datas.append(self.get_one_hour(conn, self.day, hour))
         
         
     
